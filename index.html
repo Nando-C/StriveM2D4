@@ -58,9 +58,9 @@
                         </div>
                     </form>
                   <div id="showNamesList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-                    <div class="col">
+                    <!-- <div class="col">
                         <p>My name Pedro</p>
-                    </div>
+                    </div> -->
                   </div>
                 </div>   
             </div>
@@ -70,7 +70,19 @@
                 <h2>Teams</h2>
             </div>
             <div class="container-fluid">
-                
+                <div class="container">
+                    <select class="custom-select custom-select-sm">
+                        <option selected>How many teams do you want</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                      </select>
+                    </div>
+                    <button onclick="getName()" class="btn btn-primary">Create Teams</button>
+                </div>
+                </div>
             </div>
 
         </section>
