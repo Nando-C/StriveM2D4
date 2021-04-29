@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Team Generator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Strive Team Generator</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#participants">Participants</a>
+                <a class="nav-link" href="#teams">Teams</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="jumbotron">
+            <h1 class="display-4">Strive Team Generator</h1>
+            <p class="lead">This app will allow you to generate teams and assign the participants to them!</p>
+            <hr class="my-4">
+            <p>Features: <br>
+                - Add a list of names. <br>
+                - Set the number of teams you want to be generated. <br>
+                - Each team will be randomly generated from the list of names. <br>
+                - [EXTRA] remove a user from a team. <br>
+                - [EXTRA] reset the state of the app.
+            </p>
+            <a class="btn btn-primary btn-lg" href="#participants" role="button">Start</a>
+          </div>
+
+    </header>
+
+    <main>
+        <section id="participants">
+            <div class="alert alert-info" role="alert">
+                <h2>Participants</h2>
+            </div>
+            <div class="container-fluid">
+                <div class="container">
+                    <form>
+                        <div class="row p-5">
+                            <div class="col">
+                                <input id="newName" type="text" class="form-control" placeholder="Add participants name">
+                            </div>
+                            <button onclick="getName()" class="btn btn-primary">Add Name</button>
+                        </div>
+                    </form>
+                  <div id="showNamesList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                    <div class="col">
+                        <p>My name Pedro</p>
+                    </div>
+                  </div>
+                </div>   
+            </div>
+            </section>
+        <section id="teams">
+            <div class="alert alert-info" role="alert">
+                <h2>Teams</h2>
+            </div>
+            <div class="container-fluid">
+                
+            </div>
+
+        </section>
+    </main>
+
+    <footer></footer>
+
+   
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <script src="javascript.js"></script>
+
+  </body>
+</html>
