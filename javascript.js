@@ -4,6 +4,12 @@ const showNames = document.getElementById('showNamesList')
 const showTeams = document.getElementById('showTeams')
 // console.log(showNames)
 
+window.onload = function(){
+    names.splice(0, names.length)
+    showNames.innerHTML = ''
+    showTeams.innerHTML = ''
+    console.log('page loaded')
+}
 // const newName = document.getElementById('newName').innerText
 // console.log(newName)
 const showListNames = function(name){
@@ -94,7 +100,7 @@ const removeMember = function(event){
     showListNames(lastMember.innerText)
     lastMember.remove()
     if(ul.children.length === 0){
-        parentUl.closest('.card').remove()
+        parentUl.closest('.col').remove()
     }
     // console.log(ul.children.length)
     
