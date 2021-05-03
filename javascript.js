@@ -63,15 +63,18 @@ const generateTeam = function(){
         cardUl.classList.add('list-group-flush')
         // let team = []
         for(let i=0; i<temp; i++){
-            let rand = Math.floor(Math.random() * names.length)
+            if(names.length !== 0){
 
-            let listItem = createElement('li', 'list-group-item')
-            listItem.innerText = names[rand]
-            cardUl.appendChild(listItem)
-
-            // team.push(names[rand])
-            names.splice(rand, 1)
-            // console.log(rand)
+                let rand = Math.floor(Math.random() * names.length)
+    
+                let listItem = createElement('li', 'list-group-item')
+                listItem.innerText = names[rand]
+                cardUl.appendChild(listItem)
+    
+                // team.push(names[rand])
+                names.splice(rand, 1)
+                // console.log(rand)
+            }
         }
         cardBody.appendChild(cardUl)
         // allTeams[j] = team
