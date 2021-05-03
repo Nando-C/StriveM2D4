@@ -20,7 +20,7 @@ const getName = function(){
     let name = document.getElementById('newName').value
     names.push(name)
     document.getElementById('newName').value = ''
-    console.log(names)
+    // console.log(names)
     showListNames(name)
 }
 
@@ -73,6 +73,7 @@ const generateTeam = function(){
         let removeButton = createElement('a', 'btn')
         removeButton.classList.add('btn-primary')
         removeButton.innerText = 'Remove'
+        removeButton.addEventListener('click', removeMember)
 
         cardBody.appendChild(removeButton)
         card.appendChild(cardBody)
@@ -81,6 +82,22 @@ const generateTeam = function(){
         showTeams.appendChild(colCard)
     }
     // console.log(allTeams)
+    showNames.innerHTML = ''
+}
+
+const removeMember = function(event){
+    let parentUl = event.currentTarget.parentElement
+    let ul = parentUl.children[0]
+    let lastMember = ul.lastElementChild
+    names.push(lastMember.innerText)
+    // showNames.innerHTML = ''
+    showListNames(lastMember.innerText)
+    lastMember.remove()
+    if(ul.children.length === 0){
+        parentUl.closest('.card').remove()
+    }
+    // console.log(ul.children.length)
+    
 }
 
 // let colCard = document.createElement('div')
@@ -121,3 +138,13 @@ const generateTeam = function(){
 
 // showTeams.appendChild(colCard)
 
+// This function receives 2 parameters and returns an element tag
+//      ele ->  Tag element desired
+//      clas -> class to be added to the tag element 
+// const createElement = function(element, addClass){
+//     let divEle = document.createElement(element)
+//     for(let i=0; i<addClass.length; i++){
+//         divEle.classList.add(addClass[i])
+//     }
+//     return divEle
+// }
